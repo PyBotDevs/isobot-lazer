@@ -724,6 +724,41 @@ async def hunt(ctx:SlashContext):
         currency[str(ctx.author.id)]['wallet'] += 1000
         save()
         await ctx.reply('Stupid, you died while hunting and lost 1000 coins...')
+        
+#need help cuz i only got the idea (aka the logic) and not the code detail and stuff
+@slash.slash(
+    name='open',
+    description='Opens lootbox(es) in your inventory',
+    options=[
+        create_option(name='lootbox', description='What lootbox do you want to open?', option_type=3, required=True)
+        create_option(name='amount', description='How many do you want to open?', option_type=4, required=True)
+    ]
+)
+async def open(ctx:SlashContext, lootbox:str, amount:int):
+    types = [
+        "normal",
+        "large",
+        "special"
+    ]
+    #this is gucking bloated
+    if amount <= 0:
+        await ctx.send("You can't open 0 or below lootboxes! Don't be stupid.")
+        return
+    elif lootbox not in types:
+        await ctx.send("That lootbox doesn't even exist get a brain")
+        return
+    else:
+        try:
+            n_loot = [
+                random.randint(10000, 25000)    
+            ]
+            l_loot = [
+                random.randint(50000, 75000)
+            ]
+            s_loot = [
+                random.randint(100000, 500000)
+            ]
+            #item outcomes tbd
 
 @slash.slash(
     name='fish',
