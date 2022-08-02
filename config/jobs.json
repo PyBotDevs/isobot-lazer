@@ -1,0 +1,32 @@
+{
+    "discord_mod": {
+        "salary": 10000
+    },
+    "fast_food_worker": {
+        "salary": 11250
+    },
+    "twitch_streamer": {
+        "salary": 12500
+    },
+    "youtuber": {
+        "salary": 15000
+    },
+    "pro_gamer": {
+        "salary": 18000
+    },
+    "teacher": {
+        "salary": 20000
+    },
+    "scientist": {
+        "salary": 50000
+    },
+    "doctor": {
+        "salary": 100000
+    },
+    "isobot_developer": {
+        "salary": 150000
+    },
+    "discord_employee": {
+        "salary": 500000
+    }
+}
